@@ -1,0 +1,23 @@
+{
+  "name": "pure-material",
+  "version": "0.0.1",
+  "description": "Pure JS implementation of material design components for react-native.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ftufek/pure-material.git"
+  },
+  "keywords": [
+    "react-native",
+    "material"
+  ],
+  "author": "Furkan Tufekci <furkan.dev@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ftufek/pure-material/issues"
+  },
+  "homepage": "https://github.com/ftufek/pure-material#readme"
+}
