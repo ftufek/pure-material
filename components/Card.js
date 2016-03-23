@@ -1,6 +1,7 @@
 'use strict';
 
 import React, {Component, Platform, PropTypes, StyleSheet, View} from 'react-native';
+import Ripple from './Ripple';
 
 export default class Card extends Component {
   render() {

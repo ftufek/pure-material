@@ -4,18 +4,8 @@ import React, {Component, PropTypes, StyleSheet, Text, TouchableWithoutFeedback,
 import Ripple from './Ripple';
 
 export default class Button extends Component {
-  constructor(props) {
-    super(props);
-
-    this.onPress = this.onPress.bind(this);
-  }
-
-  onPress(e) {
-    this.refs.ripple.addRipple(100,15);
-  }
-
   render() {
-    const { style, children, text = '' } = this.props;
+    const { style, children, text = '', onPress } = this.props;
     let content;
     if (children) {
       content = children;
@@ -23,12 +13,12 @@ export default class Button extends Component {
       content = <Text>{text}</Text>;
     }
     return (
-      <TouchableWithoutFeedback onPress={this.onPress}>
+      <View>
         <View style={[style, styles.container]}>
           {content}
-          <Ripple ref="ripple" />
+          <Ripple ref="ripple" onPress={onPress}/>
         </View>
-      </TouchableWithoutFeedback>
+      </View>
     );
   }
 }
