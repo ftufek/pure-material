@@ -1,10 +1,11 @@
 'use strict';
 
-import React, {Component, PropTypes, StyleSheet, Text, View} from 'react-native';
+import React, {Component, PropTypes, StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
+import Ripple from './Ripple';
 
 export default class Button extends Component {
   render() {
-    const { style, children, text = '' } = this.props;
+    const { style, children, text = '', onPress } = this.props;
     let content;
     if (children) {
       content = children;
@@ -12,8 +13,11 @@ export default class Button extends Component {
       content = <Text>{text}</Text>;
     }
     return (
-      <View style={[style, styles.container]}>
-        {content}
+      <View>
+        <View style={[style, styles.container]}>
+          {content}
+          <Ripple ref="ripple" onPress={onPress}/>
+        </View>
       </View>
     );
   }
