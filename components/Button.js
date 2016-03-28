@@ -13,11 +13,9 @@ export default class Button extends Component {
       content = <Text>{text}</Text>;
     }
     return (
-      <View>
-        <View style={[style, styles.container]}>
-          {content}
-          <Ripple ref="ripple" onPress={onPress}/>
-        </View>
+      <View style={[style, styles.container]}>
+        {content}
+        <Ripple ref="ripple" onPress={onPress}/>
       </View>
     );
   }
