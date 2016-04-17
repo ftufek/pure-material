@@ -135,6 +135,10 @@ export default class Ripple extends Component {
   }
 }
 
+Ripple.propTypes = {
+  rippleColor: PropTypes.string,
+};
+
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',

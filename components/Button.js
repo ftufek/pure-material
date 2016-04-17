@@ -5,7 +5,7 @@ import Ripple from './Ripple';
 
 export default class Button extends Component {
   render() {
-    const { style, children, text = '', onPress } = this.props;
+    const { style, children, text = '', onPress, rippleColor } = this.props;
     let content;
     if (children) {
       content = children;
@@ -15,11 +15,15 @@ export default class Button extends Component {
     return (
       <View style={[style, styles.container]}>
         {content}
-        <Ripple ref="ripple" onPress={onPress}/>
+        <Ripple ref="ripple" onPress={onPress} rippleColor={rippleColor} />
       </View>
     );
   }
 }
+
+Button.propTypes = {
+  rippleColor: PropTypes.string,
+};
 
 const styles = StyleSheet.create({
   container: {
